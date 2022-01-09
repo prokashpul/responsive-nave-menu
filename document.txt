@@ -1,0 +1,13 @@
+শব elemet কে select করতে * ছিন্ন ব্যাবহার করতে হয়'
+
+vh: schreen height ,viewport height
+vw: view width , viewport width
+
+flex desplay কে রাশিও আকারে ভাগ করা জাই
+child element aএর মধে flex: 1;
+
+Animation create করতে হলে 
+@keyframes type{
+
+}
+object-fite:cover;

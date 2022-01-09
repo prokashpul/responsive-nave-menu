@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+:root{
+    --primary-color: #4338e0;
+    --scendery-color: #b217f0;
+    --ternary-color: #17d7f0;
+    --wheat-color: #ffffff;
+}
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: antiquewhite;
+}
+html{
+    font-size: 90%;
+}
+/* common element */
+h1,h2,h3,h4,h5,h6{
+    margin:0;
+    padding: 0;
+}
+ul,li{
+    margin:0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.d-flex{
+    display: flex;
+    /* justify-content:space-between; */
+    
+}
+.justify-center{
+    justify-content: center ;
+}
+.justify-between{
+    justify-content:space-between;
+}
+.align-center{
+    align-items: center;
+}
+.container{
+    max-width:90%;
+    margin: 0 auto;
+}
+.header-area{
+    width: 100%;
+    background-color: var(--primary-color);
+    position: relative;
+    padding:1rem;
+}
+.logo img{
+    height: 2.5rem;
+    margin-right: 1rem;
+}
+.logo h1{
+    font-weight: 700;
+    color:var(--ternary-color);
+    letter-spacing: .2rem;
+}
+.nav-area li{
+        margin-right: 2rem;
+}
+.nav-area li:hover a{
+    color:var(--scendery-color);
+}
+.nav-area li:hover i{
+    color:var(--wheat-color);
+}
+.nav-area li:last-child{
+    margin-right:0;
+}
+.nav-area li a{
+    color: var(--ternary-color);
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+}
+.nav-area li a i{
+    font-size:1.5rem;
+    margin-right: .8rem;
+    color:var(--scendery-color);
+}
+.hambarger .fa-bars{
+    display: none;
+}
+@media screen and (max-width:1024px){
+  html{
+      font-size: 80.5%;
+  }
+}
+@media only screen and (max-width:774px) {
+    .container{
+        max-width:95%;
+        margin: 0 auto;
+}
+.nav-area ul{
+    display: block;
+    position: fixed;
+    width: 100%;
+    right:-100%;
+    top: 5rem;
+    background-color:var(--scendery-color);
+    height: 100vh;
+    border-top: 1px solid var(--wheat-color);
+    transition: .5s ease;
+}
+.open ul{
+    right:0;
+}
+.nav-area ul li{
+    display:block;
+    margin:0;
+    padding: 1rem;
+    background-color: var(--scendery-color);
+    border-bottom: 1px solid var(--wheat-color);
+}
+.nav-area ul li:hover{
+    background-color:var(--primary-color);
+}
+.nav-area ul li i{
+    color:var(--wheat-color);
+    align-items: center;
+}
+.hambarger .fa-bars{
+    font-size: 2rem;
+    color:var(--ternary-color);
+    display: block;
+}
+}

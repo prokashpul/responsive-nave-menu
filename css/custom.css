@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+
+}
+.container{
+    max-width: 80%;
+    margin: 0 auto;
+}
+.banner{
+    height: 100vh;
+}
+.d-flex{
+    display: flex;
+    justify-content:space-between;
+}
+.banner-left{
+    flex:1;
+    justify-content:center;
+    align-items: center;
+}
+.banner-right{
+    flex:1;
+    justify-content:center;
+    align-items: center;
+}
+.banner-title{
+    font-size:2rem;
+    /* white-space: nowrap; */
+    text-transform: uppercase;
+    position: relative;
+    color: transparent;
+    transition: 1s ease;
+    letter-spacing: 5px;
+    font-weight:700;
+}
+.banner-title::before{
+    content: "I LOVE PROGGRAMING";
+    color:aqua;
+    position:absolute;
+    top:0;
+    left:0;
+    animation: typing 4s linear infinite;
+}
+.btn{
+    text-decoration: none;
+    padding:10px 20px;
+    margin-top: 20px;
+    display: inline-block;
+    background-color: #5d47d8;
+    color: #fff;
+    transition: ease 1s;
+    border-radius: 5px;
+    position: relative;
+
+}
+.btn:hover{
+    letter-spacing:2px;
+    transition: ease 1s;
+    box-shadow: inset 0 0 25px #050505;
+}
+.btn::after,.btn::before{
+    content:"";
+    height: 2px;
+    width:0;
+    background:rgb(5, 252, 157);
+    position: absolute;
+    transition: 1s ease ;
+}
+.btn::after{
+    bottom:0;
+    left:0;
+}
+.btn::before{
+    right: 0;
+    top: 0;
+    
+}
+.btn:hover::before,.btn:hover::after{
+    width:100%;
+}
+span::after,span::before{
+    content: "";
+    width:2px;
+    height:0;
+    position: absolute;
+    background-color:#27fcfc;
+    transition: 1s ease .7s;
+}
+span::after{
+    bottom: 0;
+    right:0;
+}
+span::before{
+    top: 0;
+    left:0;
+}
+.btn:hover span::after,.btn:hover span::before{
+    height: 100%;
+}
+/* animation create */
+@keyframes typing{
+    0%{
+        content: "|";
+    }
+    5%{
+        content: "I|";
+    }
+    10%{
+        content: "I Lo";
+    }
+    15%{
+        content: "I Love|";
+    }
+    20%{
+        content: "I Love pro|";
+    }
+    30%{
+        content: "I Love proggr|";
+    }
+    40%{
+        content: "I Love proggrami|";
+    }
+    50%{
+        content: "I Love proggraming|";
+    }
+    60%{
+        content: "I Love proggrami|";
+    }
+    70%{
+        content: "I Love proggr|";
+    }
+    80%{
+        content: "I Love pro|";
+    }
+    90%{
+        content: "I Love|";
+    }
+    100%{
+        content: "I|";
+    }
+}
